@@ -1,0 +1,20 @@
+level "Border Generation" {
+    var int width = 10;
+    var int height = 10;
+
+    for (i in 0 to width) {
+        place WALL at (0, i);
+        place WALL at (height - 1, i);
+    }
+
+    for (j in 1 to height - 1) {
+        place WALL at (j, 0);
+        place WALL at (j, width - 1);
+    }
+
+    var entity p = PLAYER;
+    place p at (5, 5);
+
+    validate "Player initialized": p == PLAYER;
+}
+

@@ -1,0 +1,29 @@
+func int calcDistance(int x1, int y1, int x2, int y2) {
+    var int dx = x1 - x2;
+    var int dy = y1 - y2;
+
+    if (dx < 0) { dx = 0 - dx; }
+    if (dy < 0) { dy = 0 - dy; }
+
+    return dx + dy;
+}
+
+level "Distance Check" {
+    var int pX = 5;
+    var int pY = 5;
+    var int tX = 8;
+    var int tY = 2;
+
+    place PLAYER at (pX, pY);
+    place TARGET at (tX, tY);
+
+    var int dist = calcDistance(pX, pY, tX, tY);
+
+    if (dist > 0) {
+        print "Target is placed successfully. Distance:";
+        print dist;
+    }
+
+    validate "Distance limit": dist < 10;
+}
+
