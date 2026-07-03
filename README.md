@@ -143,8 +143,8 @@ This project focuses on the implementation of a custom language pipeline. The cu
 
 ## Team
 
-- Your Name
-- Teammate Name
+- Cemal Gümüş
+- Ömer Faruk Demir
 
 ## Suggested Repository Description
 
